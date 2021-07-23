@@ -2,7 +2,8 @@ const baseURL = "https://auth0books.herokuapp.com";
 
 fetch(`${baseURL}/user/me`)
   .then((res) => res.json())
-  .then(({ user }) => {
+  .then(({ user, books }) => {
+    console.log(books);
     toggleRightNav(user);
   });
 
